@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>违禁词替换工具</title>
+    <!-- 引入Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入自定义样式 -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <header class="text-center mb-8">
+            <h1 class="text-3xl font-bold text-gray-800 mb-2">违禁词替换工具</h1>
+            <p class="text-gray-600">输入文案，自动替换违禁词为合规词</p>
+        </header>
+        
+        <main class="w-[90%] mx-auto bg-white rounded-lg shadow-md p-6">
+            <!-- 使用固定布局 -->
+            <div class="flex flex-row space-x-6">
+                <!-- 左侧：输入部分 -->
+                <div class="w-1/2 mb-0">
+                    <label for="inputText" class="block text-gray-700 font-medium mb-2">输入需要检查的文案：</label>
+                    <textarea id="inputText" class="w-full h-[500px] p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="请在此输入需要检查的文案..."></textarea>
+                    
+                    <div class="mt-4 flex justify-start">
+                        <button id="modifyButton" class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-6 rounded-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                            开始修改
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- 右侧：输出部分 -->
+                <div class="w-1/2">
+                    <label for="outputText" class="block text-gray-700 font-medium mb-2">修改后的文案：</label>
+                    <div id="outputText" class="w-full h-[500px] p-3 border border-gray-300 rounded-md bg-gray-50 overflow-auto"></div>
+                    
+                    <div class="mt-4 flex justify-start">
+                        <button id="copyButton" class="bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-6 rounded-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2">
+                            复制修改后的内容
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 text-sm text-gray-600 border-t pt-4">
+                <h3 class="font-medium text-gray-700 mb-2">说明：</h3>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li><span class="text-red-500 font-bold">红色加粗</span> 表示原文中的违禁词</li>
+                    <li><span class="text-green-500 font-bold">绿色加粗</span> 表示替换后的合规词</li>
+                </ul>
+            </div>
+        </main>
+    </div>
+
+    <!-- 引入JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html> 

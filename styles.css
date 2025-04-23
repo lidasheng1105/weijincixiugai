@@ -1,0 +1,94 @@
+/* 违禁词替换工具样式 */
+
+/* 违禁词样式 - 红色加粗 */
+.highlight-forbidden {
+    color: red;
+    font-weight: bold;
+}
+
+/* 合规词样式 - 绿色加粗 */
+.highlight-compliant {
+    color: green;
+    font-weight: bold;
+}
+
+/* 文本框固定样式 */
+#inputText {
+    resize: none; /* 禁止用户调整大小 */
+    overflow-y: auto; /* 内容超出时显示滚动条 */
+    height: 500px !important; /* 固定高度 */
+    padding: 16px !important; /* 内边距 */
+    font-size: 16px; /* 字体大小 */
+    line-height: 1.6; /* 行高 */
+    width: 100% !important; /* 固定宽度 */
+}
+
+#outputText {
+    height: 500px !important; /* 固定高度 */
+    overflow-y: auto; /* 内容超出时显示滚动条 */
+    word-break: break-word; /* 避免溢出 */
+    padding: 16px !important; /* 内边距 */
+    font-size: 16px; /* 字体大小 */
+    line-height: 1.6; /* 行高 */
+    width: 100% !important; /* 固定宽度 */
+}
+
+/* 按钮样式 */
+button {
+    white-space: nowrap; /* 防止按钮文本换行 */
+    min-width: fit-content; /* 确保按钮至少能容纳其内容 */
+}
+
+/* 按钮容器固定样式 */
+.flex.items-center {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap; /* 防止按钮换行 */
+}
+
+/* 编辑按钮样式 */
+#editButton {
+    display: inline-block;
+    margin-top: 0;
+    cursor: pointer;
+}
+
+/* 清空按钮样式 */
+#clearButton {
+    display: inline-block;
+    margin-top: 0;
+    cursor: pointer;
+}
+
+/* 容器固定样式 */
+main {
+    width: 90% !important;
+    padding: 2rem !important;
+    margin: 0 auto;
+}
+
+/* 左右列固定样式 */
+.input-column, .output-column {
+    width: 50% !important;
+}
+
+/* 输入显示框固定样式 */
+.input-display {
+    height: 500px !important;
+    padding: 16px !important;
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-y: auto;
+}
+
+/* 复制成功提示动画 */
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.copy-success {
+    animation: fadeInOut 2s ease-in-out;
+} 
